@@ -20,20 +20,31 @@ body {
 .navbar {
     background-color: var(--bufalo-negro) !important;
     box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
-/* Logo PERFILES BÚFALO en rojo */
-.navbar-brand {
-    font-size: 1.5rem;
+/* Logo en la navbar */
+.logo-navbar {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+/* Texto "PERFILES BÚFALO" al lado del logo */
+.navbar-brand span {
+    font-size: 1.6rem;
     font-weight: 800;
     letter-spacing: 1.5px;
-    color: var(--bufalo-rojo) !important;
+    color: var(--bufalo-rojo);
+    line-height: 1;
 }
 
-.navbar-brand:hover {
-    color: var(--bufalo-rojo-oscuro) !important;
+.navbar-brand:hover span {
+    color: var(--bufalo-rojo-oscuro);
 }
 
 /* Enlaces del menú */
@@ -68,11 +79,19 @@ body {
     color: #dee2e6;
 }
 
+/* ===== Encabezado de páginas interiores ===== */
+.page-header {
+    background: linear-gradient(135deg, var(--bufalo-azul-oscuro) 0%, var(--bufalo-negro) 100%);
+    border-bottom: 5px solid var(--bufalo-rojo);
+    padding: 3rem 0;
+}
+
 /* ===== Tarjetas de producto ===== */
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #e9ecef;
     background-color: var(--bufalo-blanco);
+    overflow: hidden;
 }
 
 .card:hover {
@@ -86,9 +105,18 @@ body {
     font-weight: 700;
 }
 
-/* Íconos dentro de las tarjetas en rojo */
-.card .bi {
-    color: var(--bufalo-rojo) !important;
+/* Imagen de producto dentro de la tarjeta */
+.producto-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.card:hover .producto-img {
+    transform: scale(1.05);
+    border-bottom-color: var(--bufalo-rojo);
 }
 
 /* ===== Títulos de sección ===== */
@@ -112,7 +140,7 @@ h2::after {
 }
 
 /* ===== Botones ===== */
-.btn-warning {
+.btn-danger {
     background-color: var(--bufalo-rojo);
     border-color: var(--bufalo-rojo);
     color: var(--bufalo-blanco);
@@ -121,61 +149,11 @@ h2::after {
     transition: all 0.3s ease;
 }
 
-.btn-warning:hover {
+.btn-danger:hover {
     background-color: var(--bufalo-rojo-oscuro);
     border-color: var(--bufalo-rojo-oscuro);
     color: var(--bufalo-blanco);
     transform: translateY(-2px);
-}
-
-/* ===== Footer ===== */
-footer {
-    background-color: var(--bufalo-negro) !important;
-    border-top: 4px solid var(--bufalo-rojo);
-    color: var(--bufalo-blanco);
-}
-
-/* ===== Sección productos con fondo gris claro ===== */
-section {
-    background-color: var(--bufalo-blanco);
-}
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-    .hero h1 {
-        font-size: 2rem;
-    }
-    /* ===== Encabezado de páginas interiores ===== */
-.page-header {
-    background: linear-gradient(135deg, var(--bufalo-azul-oscuro) 0%, var(--bufalo-negro) 100%);
-    border-bottom: 5px solid var(--bufalo-rojo);
-    padding: 3rem 0;
-}
-
-/* ===== Formularios ===== */
-.form-control:focus {
-    border-color: var(--bufalo-rojo);
-    box-shadow: 0 0 0 0.25rem rgba(192, 57, 43, 0.25);
-}
-
-.form-label {
-    font-weight: 600;
-    color: var(--bufalo-negro);
-}
-
-/* ===== Botón danger (rojo) ===== */
-.btn-danger {
-    background-color: var(--bufalo-rojo);
-    border-color: var(--bufalo-rojo);
-    font-weight: 600;
-}
-
-.btn-danger:hover {
-    background-color: var(--bufalo-rojo-oscuro);
-    border-color: var(--bufalo-rojo-oscuro);
 }
 
 .btn-outline-danger {
@@ -189,13 +167,43 @@ section {
     color: white;
 }
 
-/* Badges rojos en noticias */
+/* ===== Formularios ===== */
+.form-control:focus {
+    border-color: var(--bufalo-rojo);
+    box-shadow: 0 0 0 0.25rem rgba(192, 57, 43, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--bufalo-negro);
+}
+
+/* ===== Badges rojos en noticias ===== */
 .badge.bg-danger {
     background-color: var(--bufalo-rojo) !important;
 }
 
-/* Lista de contacto */
+/* ===== Lista de contacto ===== */
 .list-unstyled li {
     line-height: 1.6;
 }
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--bufalo-negro) !important;
+    border-top: 4px solid var(--bufalo-rojo);
+    color: var(--bufalo-blanco);
+}
+
+/* ===== Ajustes responsivos ===== */
+@media (max-width: 768px) {
+    .logo-navbar {
+        height: 35px;
+    }
+    .navbar-brand span {
+        font-size: 1.1rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
 }
