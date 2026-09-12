@@ -148,4 +148,54 @@ section {
     .hero h1 {
         font-size: 2rem;
     }
+    /* ===== Encabezado de páginas interiores ===== */
+.page-header {
+    background: linear-gradient(135deg, var(--bufalo-azul-oscuro) 0%, var(--bufalo-negro) 100%);
+    border-bottom: 5px solid var(--bufalo-rojo);
+    padding: 3rem 0;
+}
+
+/* ===== Formularios ===== */
+.form-control:focus {
+    border-color: var(--bufalo-rojo);
+    box-shadow: 0 0 0 0.25rem rgba(192, 57, 43, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--bufalo-negro);
+}
+
+/* ===== Botón danger (rojo) ===== */
+.btn-danger {
+    background-color: var(--bufalo-rojo);
+    border-color: var(--bufalo-rojo);
+    font-weight: 600;
+}
+
+.btn-danger:hover {
+    background-color: var(--bufalo-rojo-oscuro);
+    border-color: var(--bufalo-rojo-oscuro);
+}
+
+.btn-outline-danger {
+    color: var(--bufalo-rojo);
+    border-color: var(--bufalo-rojo);
+}
+
+.btn-outline-danger:hover {
+    background-color: var(--bufalo-rojo);
+    border-color: var(--bufalo-rojo);
+    color: white;
+}
+
+/* Badges rojos en noticias */
+.badge.bg-danger {
+    background-color: var(--bufalo-rojo) !important;
+}
+
+/* Lista de contacto */
+.list-unstyled li {
+    line-height: 1.6;
+}
 }
