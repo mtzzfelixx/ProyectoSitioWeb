@@ -1,0 +1,66 @@
+/* ===== Paleta de colores Perfiles Búfalo ===== */
+:root {
+    --bufalo-naranja: #e67e22;
+    --bufalo-negro: #1a1a1a;
+    --bufalo-gris: #f4f4f4;
+}
+
+/* Navbar más elegante */
+.navbar {
+    background-color: var(--bufalo-negro) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: var(--bufalo-naranja) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--bufalo-naranja) !important;
+}
+
+/* Hero (banner de bienvenida) */
+.hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid var(--bufalo-naranja);
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Tarjetas de producto */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+
+/* Botón naranja personalizado */
+.btn-warning {
+    background-color: var(--bufalo-naranja);
+    border-color: var(--bufalo-naranja);
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-warning:hover {
+    background-color: #cf6d1b;
+    border-color: #cf6d1b;
+    color: #fff;
+}
